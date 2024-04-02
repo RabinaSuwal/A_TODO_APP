@@ -1,38 +1,24 @@
 "use client";
 import React,{useState} from 'react'
 
-const AddTodo = () => {
+const AddTodo = (addTodo) => {
     const[todo, setTodo] = useState("");
 
-    const[todos, setTodos] = useState([]);
-  
      const handlesubmit = (e) =>{
       e.preventDefault();
-      if(!todo){
-  
-      }
+      if(!todo){}
       else{
-        setTodos([...todos, todo]);
-        setTodo('');
-      }}
+       addTodo(todo);
+       setTodo('');}
+      }
        
   
     return (
       <div>
-        <div>
-         <form>
+         <form onSubmit={handlesubmit}>
           <input type="text" placeholder='Enter ToDo' onChange={(e)=>setTodo(e.target.value)} value={todo} />
-          <button type="submit" onClick={handlesubmit}>ADD</button>
-         </form>
-        </div> 
-  
-          <div className='showItems'>
-         
-          {todos.map((todo, index) => {
-            return(
-            <li key={index}>{todo}</li>)
-          })}
-         </div>  
+          <button type="submit">ADD</button>
+         </form>   
       </div>
     )
 }
