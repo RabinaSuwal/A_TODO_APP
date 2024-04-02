@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 
-export default function CheckboxList() {
-    const[checked, setChecked] = useState();
+
+export default function CheckboxList({todo}) {
+    const[checked, setChecked] = useState(false);
+
 
     const handleCheckbox = () =>{
         setChecked(!checked);
@@ -10,6 +12,9 @@ export default function CheckboxList() {
     <div>
       <li>
         <input type="checkbox" checked={checked} onChange={handleCheckbox} />
+
+        {todo}
+
       </li>
     </div>
   )
