@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import {useState} from 'react'
 import CheckboxList from './CheckboxList'
 
 export default function TodoList({todos, setTodos}) {

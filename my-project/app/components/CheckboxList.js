@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {FaTrash} from 'react-icons/fa'
 
 export default function CheckboxList({todo, onDelete}) {
