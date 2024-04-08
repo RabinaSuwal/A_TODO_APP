@@ -1,5 +1,5 @@
 "use client";
-import React,{useState} from 'react'
+import { useState } from "react";
 
 const AddTodo = (addTodo) => {
     const[todo, setTodo] = useState("");
@@ -12,7 +12,6 @@ const AddTodo = (addTodo) => {
        setTodo('');}
       }
        
-  
     return (
       <div>
          <form onSubmit={handlesubmit}>

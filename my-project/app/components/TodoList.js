@@ -1,7 +1,5 @@
-import React from 'react'
-import CheckboxList from './CheckboxList'
-
-
+ import CheckboxList from './CheckboxList'
+ 
 export default function TodoList({todos}) {
 
   return (

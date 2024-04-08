@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
-
+import { useState } from "react";
 
 export default function CheckboxList({todo}) {
     const[checked, setChecked] = useState(false);
-
 
     const handleCheckbox = () =>{
         setChecked(!checked);
