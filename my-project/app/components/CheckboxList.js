@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import {FaTrash} from 'react-icons/fa'
 
 export default function CheckboxList({todo, onDelete}) {
     const[checked, setChecked] = useState(false);
@@ -17,7 +16,7 @@ export default function CheckboxList({todo, onDelete}) {
       <li>
         <input type="checkbox" checked={checked} onChange={handleCheckbox} />
         {todo}
-        <FontAwesomeIcon icon={faTrash} onClick={handleDelete} className='cursor-pointer text-red-500 hover:text-red-600'/>
+        <button onClick={handleDelete} className='cursor-pointer text-red-500 hover:text-red-600'><FaTrash /></button>
       </li>
     </div>
   )
