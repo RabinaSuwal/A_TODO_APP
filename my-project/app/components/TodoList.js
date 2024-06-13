@@ -1,5 +1,4 @@
-import {useState} from 'react'
-import CheckboxList from './CheckboxList'
+import CheckboxList from './CheckboxList';
 
 export default function TodoList({todos, setTodos}) {
   const handleDelete = (todoToDelete) =>{
@@ -10,12 +9,13 @@ export default function TodoList({todos, setTodos}) {
   return (
     <div> 
       
-      <div className="showItems pt-4">
+      <div className=" w-full max-w-md mt-4 ">
         <ul>
           {todos.map((todo, index) => (
             <CheckboxList key={index} todo={todo} onDelete={handleDelete}/>
           ))}
         </ul>
+        {/* <TodoItems todos={todos}/> */}
       </div>
    
     </div>
